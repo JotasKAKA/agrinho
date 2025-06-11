@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="pt">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Caminhão de Resíduos</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            text-align: center;
+            background-color: #eef2f3;
+        }
+        .container {
+            position: relative;
+            width: 800px;
+            margin: auto;
+            overflow: hidden;
+        }
+        .cidade, .campo {
+            width: 100%;
+            height: 150px;
+            display: inline-block;
+            padding: 20px;
+            font-size: 20px;
+        }
+        .cidade {
+            background-color: #89CFF0;
+        }
+        .campo {
+            background-color: #7CFC00;
+        }
+        .caminhao {
+            position: absolute;
+            width: 100px;
+            height: 50px;
+            background-color: red;
+            top: 60px;
+            left: 0;
+            transition: left 3s linear;
+        }
+    </style>
+</head>
+<body>
+
+    <h1>Caminhão Transportando Resíduos</h1>
+    <div class="container">
+        <div class="cidade">Cidade</div>
+        <div class="campo">Campo</div>
+        <div class="caminhao"></div>
+    </div>
+    
+    <button onclick="moverCaminhao()">Transportar Resíduos</button>
+
+    <script>
+        function moverCaminhao() {
+            let caminhao = document.querySelector('.caminhao');
+            caminhao.style.left = "700px";
+            setTimeout(() => {
+                caminhao.style.left = "0px";
+            }, 3000);
+        }
+    </script>
+
+</body>
+</html>
+
